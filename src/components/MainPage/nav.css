@@ -16,8 +16,7 @@
 }
 
 .nav-contents {
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
 }
 .nav-black {
     background-color: rgb(237,241,245);
@@ -39,4 +38,8 @@
     width:30px;
     height: 30px;
     cursor: pointer;
+}
+.nav-drawer{
+    display: flex;
+    width: 100%;
 }

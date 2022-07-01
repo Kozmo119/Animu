@@ -2,6 +2,7 @@ import logo from "./logo.png";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import { height } from "@mui/system";
+import SwipeableTemporaryDrawer from "../Drawer/SwipeableTemporaryDrawer";
 
 
 
@@ -19,6 +20,7 @@ const Navbar = () => {
           }}
           alt="logo"
         />
+    
         <Link to='/login'>
         <button className="signin-button" style={{ height: "2rem",
       width: "6rem"}}>Sign in</button></Link>
