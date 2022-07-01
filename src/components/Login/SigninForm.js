@@ -14,7 +14,7 @@ const SigninForm = () => {
         {" "}
         <h1 className="header-signin">
           Sign in{" "}
-          <img
+          {/* <img
             className="logo"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Apple_Computer_Logo_rainbow.svg/1757px-Apple_Computer_Logo_rainbow.svg.png"
             style={{
@@ -22,18 +22,18 @@ const SigninForm = () => {
               height: "45px",
             }}
             alt="logo"
-          />
+          /> */}
         </h1>{" "}
         <br />
         <TextField
           label="Email address"
           required
           style={{
-            backgroundColor: "#333",
+            backgroundColor: "rgba(237,241,245,.7)",
             width: "400px",
           }}
-          InputLabelProps={{ style: { color: "white" } }}
-          sx={{ input: { color: "white" } }}
+          InputLabelProps={{ style: { color: "black" } }}
+          sx={{ input: { color: "black" } }}
         />{" "}
         <br /> <br /> <br />
         <TextField
@@ -42,11 +42,11 @@ const SigninForm = () => {
           required
           style={{
             color: "white",
-            backgroundColor: "#333",
+            backgroundColor: "rgba(237,241,245,.7)",
             width: "400px",
           }}
-          InputLabelProps={{ style: { color: "white" } }}
-          sx={{ input: { color: "white" } }}
+          InputLabelProps={{ style: { color: "black" } }}
+          sx={{ input: { color: "black" } }}
         ></TextField>
         <br />
         <br />
@@ -56,7 +56,7 @@ const SigninForm = () => {
         <Button
           style={{
             borderRadius: 5,
-            backgroundColor: "red",
+            backgroundColor: "rgba(48,158,246)",
             fontSize: "20px",
             color: "white",
             width: "400px",

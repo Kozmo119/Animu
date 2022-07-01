@@ -5,6 +5,7 @@ import { Switch, router, Route } from "react-router-dom";
 import LoginPage from "./components/Login/LoginPage";
 import HomeScreen from "./components/MainPage/HomeScreen";
 import Footer from "./components/Footer/Footer"
+import Nav from "./components/MainPage/Nav";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
 
       <Route path="/login">
         <LoginPage />
+        <Nav/>  
         <Footer/>
       </Route>
       <Route path="/homepage">

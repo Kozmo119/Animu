@@ -8,7 +8,7 @@ const LoginPage = () => {
   return (
     <div className="main-login">
       <div className="overlay-login"></div>
-      <img src="https://i.redd.it/c3uhsgo1vx541.jpg" alt="background"/>
+      
       <SigninForm />
     </div>
   );
