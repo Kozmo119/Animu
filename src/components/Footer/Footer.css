@@ -1,0 +1,43 @@
+.footer-container {
+    max-width: 100%;
+    max-height: 120px;
+    background-color:  rgb(92, 114, 138);
+    padding: 8% 22%;
+    text-align: justify;
+    text-justify: inter-word;
+
+}
+@media only screen and (max-width: 900px) {
+    .footer-container  {
+        padding: 10% 3% ;
+        text-align: justify;
+    text-justify: inter-word;
+    }
+  }
+
+
+
+
+.footerContent-container {
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, max-content));
+  grid-gap: 8px;
+  justify-content: space-around;
+  
+}
+
+
+
+.footerContent-container h3 {
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    
+
+
+}
+@media only screen and (max-width: 700px) {
+    .footerContent-container h3  {
+        font-size: 12px;
+    }
+  }
