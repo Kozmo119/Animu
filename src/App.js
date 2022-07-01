@@ -4,9 +4,9 @@ import StoryCard from "./components/FirstPage/StoryCard";
 import { Switch, router, Route } from "react-router-dom";
 import LoginPage from "./components/Login/LoginPage";
 import HomeScreen from "./components/MainPage/HomeScreen";
-import Footer from "./components/Footer/Footer"
+import Footer from "./components/Footer/Footer";
 import Nav from "./components/MainPage/Nav";
-
+import Profile from "./components/Profile/Profile";
 function App() {
   return (
     <Switch>
@@ -19,11 +19,14 @@ function App() {
 
       <Route path="/login">
         <LoginPage />
-        <Footer/>  
+        <Footer />
       </Route>
       <Route path="/homepage">
-        <HomeScreen/>
-        <Footer/>
+        <HomeScreen />
+        <Footer />
+      </Route>
+      <Route path="/profile">
+        <Profile />
       </Route>
     </Switch>
   );

@@ -1,0 +1,21 @@
+.profileNav-container {
+    max-width: 100%;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.profileNavContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 8px;
+}
+
+.profileNavContainer h1 {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.profileNavContainer h1:hover {
+    color: grey;
+}
