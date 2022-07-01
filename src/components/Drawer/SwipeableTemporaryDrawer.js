@@ -14,8 +14,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import { color } from "@mui/system";
 import HomeIcon from "@mui/icons-material/Home";
-import PersonIcon from '@mui/icons-material/Person';
-import PersonalVideoIcon from '@mui/icons-material/PersonalVideo';
+import PersonIcon from "@mui/icons-material/Person";
+import PersonalVideoIcon from "@mui/icons-material/PersonalVideo";
+import SettingsIcon from "@mui/icons-material/Settings";
+import FlagIcon from "@mui/icons-material/Flag";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import FeedbackIcon from "@mui/icons-material/Feedback";
+import "./swipeableTemporaryDrawer.css"
 
 export default function SwipeableTemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -42,7 +47,7 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Netflix"].map((text, index) => (
+        {["Animu"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -73,19 +78,22 @@ export default function SwipeableTemporaryDrawer() {
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              <Link to="/" style={{ textDecoration: "none", color: "black"}} >
+              <Link to="/" style={{ textDecoration: "none", color: "black" }}>
                 <ListItemText primary={text} />
               </Link>
             </ListItemButton>
-          </ListItem>   
+          </ListItem>
         ))}
-         {["Profile"].map((text, index) => (
+        {["Profile"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 <PersonIcon />
               </ListItemIcon>
-              <Link to="/profile" style={{ textDecoration: "none", color: "black"}} >
+              <Link
+                to="/profile"
+                style={{ textDecoration: "none", color: "black" }}
+              >
                 <ListItemText primary={text} />
               </Link>
             </ListItemButton>
@@ -97,7 +105,61 @@ export default function SwipeableTemporaryDrawer() {
               <ListItemIcon>
                 <PersonalVideoIcon />
               </ListItemIcon>
-              <Link to="/homepage" style={{ textDecoration: "none", color: "black"}} >
+              <Link
+                to="/homepage"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <ListItemText primary={text} />
+              </Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {["Setting"].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <SettingsIcon />
+              </ListItemIcon>
+              <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+                <ListItemText primary={text} />
+              </Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
+        {["Report History"].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <FlagIcon />
+              </ListItemIcon>
+              <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+                <ListItemText primary={text} />
+              </Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
+        {["Help"].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <HelpOutlineIcon />
+              </ListItemIcon>
+              <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+                <ListItemText primary={text} />
+              </Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
+        {["Send feedback"].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <FeedbackIcon />
+              </ListItemIcon>
+              <Link to="/" style={{ textDecoration: "none", color: "black" }}>
                 <ListItemText primary={text} />
               </Link>
             </ListItemButton>
@@ -109,10 +171,10 @@ export default function SwipeableTemporaryDrawer() {
   );
 
   return (
-    <div>
-      <MenuIcon />
+    <div className="drawer-menu">
+      <MenuIcon style={{paddingTop: "5px"}} />
       {["left"].map((anchor) => (
-        <React.Fragment key={anchor}>
+       <>
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
           <SwipeableDrawer
             anchor={anchor}
@@ -122,7 +184,7 @@ export default function SwipeableTemporaryDrawer() {
           >
             {list(anchor)}
           </SwipeableDrawer>
-        </React.Fragment>
+          </>
       ))}
     </div>
   );

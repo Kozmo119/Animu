@@ -1,6 +1,7 @@
 import "./nav.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import SwipeableTemporaryDrawer from "../Drawer/SwipeableTemporaryDrawer";
 const Nav = () => {
   const [show, handleShow] = useState(false);
@@ -22,7 +23,6 @@ const Nav = () => {
     <div className={`nav ${show && "nav-black"}`}>
       <div className="nav-contents">
         <div className="nav-drawer">
-        <SwipeableTemporaryDrawer />
           <Link to="/">
             <img
               className="nav-logo"
@@ -30,9 +30,11 @@ const Nav = () => {
               alt="logo"
             />
           </Link>
+          <SwipeableTemporaryDrawer/>
 
           
         </div>
+      
         <Link to="/profile">
           <img
             className="nav-avatar"
@@ -40,6 +42,7 @@ const Nav = () => {
             alt="logo"
           />
         </Link>
+    
       </div>
     </div>
   );

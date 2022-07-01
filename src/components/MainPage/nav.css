@@ -17,6 +17,8 @@
 
 .nav-contents {
     width: 100%;
+    display: flex;
+    
 }
 .nav-black {
     background-color: rgb(237,241,245);
@@ -24,8 +26,8 @@
 
 .nav-logo {
     position: fixed;
-    top:10px;
-    left:20px;
+    padding-top: 2px;
+    left:10%;
     width:80px;
     height: 30px;
     object-fit: contain;
@@ -41,5 +43,6 @@
 }
 .nav-drawer{
     display: flex;
-    width: 100%;
+    min-width: 10%;
+    justify-content: center;
 }
