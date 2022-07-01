@@ -10,6 +10,7 @@ import Profile from "./components/Profile/Profile";
 function App() {
   return (
     <Switch>
+      
       <Route path="/" exact>
         <div className="main">
           <Navbar />
