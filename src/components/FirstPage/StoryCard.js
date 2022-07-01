@@ -17,7 +17,7 @@ const StoryCard = () => {
             
             
           <div className="vid-wrapper">
-            <video src={demonSlayer} autoPlay loop muted className="vid" />
+            <img src="https://www.fanbolt.com/storage/2021/08/anime-iphone-wallpaper-800x500.jpg" alt="wallpaper"/>
             <div className="vid-gradient"> <div className="card-text">
       <div className="text-container">
       <h1 className="header">Unlimited Anime and more</h1>
