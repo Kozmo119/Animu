@@ -25,6 +25,12 @@
     align-items: center;
 }
 
+.story-header img {
+    cursor: pointer;
+}
+
+
+
 .logo {
     background-color: transparent;
 }

@@ -27,6 +27,10 @@ function App() {
       </Route>
       <Route path="/profile">
         <Profile />
+        <Footer/>
+      </Route>
+      <Route path="/homepage/:animeName">
+        
       </Route>
     </Switch>
   );
