@@ -2,6 +2,7 @@
 import MoreInfo from "./MoreInfo";
 import './storyCard.css';
 import demonSlayer from "./demonSlayer.mp4"
+import Footer from "../Footer/Footer";
 
 
 const StoryCard = () => {
@@ -39,7 +40,7 @@ const StoryCard = () => {
      
 
     <MoreInfo/>
-
+    <Footer />
 
 
     </div>

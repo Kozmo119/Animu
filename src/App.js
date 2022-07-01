@@ -19,11 +19,11 @@ function App() {
 
       <Route path="/login">
         <LoginPage />
-        <Nav/>  
-        <Footer/>
+        <Footer/>  
       </Route>
       <Route path="/homepage">
         <HomeScreen/>
+        <Footer/>
       </Route>
     </Switch>
   );
