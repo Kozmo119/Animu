@@ -52,13 +52,13 @@ const SigninForm = () => {
         <br />
         <br />
         
-        <Link to='/homepage' style={{ textDecoration: "none" }}>
+        <Link to='/profile' style={{ textDecoration: "none" }}>
         <Button
           style={{
             borderRadius: 5,
             backgroundColor: "rgba(48,158,246)",
             fontSize: "20px",
-            color: "white",
+            color: "white", 
             width: "400px",
           }}
         >

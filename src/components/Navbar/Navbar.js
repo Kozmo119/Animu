@@ -12,10 +12,10 @@ const Navbar = () => {
        
         <img
           className="logo"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Apple_Computer_Logo_rainbow.svg/1757px-Apple_Computer_Logo_rainbow.svg.png"
+          src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
           style={{
-            width: "60px",
-            height: "55px",
+            width: "85px",
+            height: "75px",
           }}
           alt="logo"
         />
