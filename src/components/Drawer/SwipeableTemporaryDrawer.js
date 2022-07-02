@@ -20,7 +20,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import FlagIcon from "@mui/icons-material/Flag";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import FeedbackIcon from "@mui/icons-material/Feedback";
-import "./swipeableTemporaryDrawer.css"
+import "./swipeableTemporaryDrawer.css";
 
 export default function SwipeableTemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -172,7 +172,7 @@ export default function SwipeableTemporaryDrawer() {
 
   return (
     <div className="drawer-menu">
-      <MenuIcon style={{paddingTop: "5px"}} />
+      {/* <MenuIcon />
       {["left"].map((anchor) => (
        <>
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
@@ -185,7 +185,7 @@ export default function SwipeableTemporaryDrawer() {
             {list(anchor)}
           </SwipeableDrawer>
           </>
-      ))}
+      ))} */}
     </div>
   );
 }

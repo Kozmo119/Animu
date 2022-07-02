@@ -7,6 +7,7 @@ import HomeScreen from "./components/MainPage/HomeScreen";
 import Footer from "./components/Footer/Footer";
 import Nav from "./components/MainPage/Nav";
 import Profile from "./components/Profile/Profile";
+import RenderedAnimeList from "./components/MainPage/RenderedAnime/RenderedAnimeList";
 function App() {
   return (
     <Switch>
@@ -22,7 +23,7 @@ function App() {
         <LoginPage />
         <Footer />
       </Route>
-      <Route path="/homepage">
+      <Route path="/homepage" exact>
         <HomeScreen />
         <Footer />
       </Route>
@@ -31,7 +32,7 @@ function App() {
         <Footer/>
       </Route>
       <Route path="/homepage/:animeName">
-        
+        <RenderedAnimeList/>
       </Route>
     </Switch>
   );
