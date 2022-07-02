@@ -14,3 +14,14 @@
 // export default requests;
 
 // https://api.themoviedb.org/3/trending/all/week?api_key=3c042052442f6c942f98ed0becd08be7&language=en-US
+
+const requests = {
+  fetchComedyAnimes: `/1`,
+  fetchActionAnimes: `/2`,
+  fetchEcchiAnimes: `/3`,
+};
+
+
+export default requests;
+
+// http://localhost:8080/1

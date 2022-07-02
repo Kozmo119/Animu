@@ -2,6 +2,7 @@ import React from "react";
 import animateScroll from "react-scroll/modules/mixins/animate-scroll";
 import Anime from "./Anime";
 
+
 function AnimeList({ animesGenre }) {
   const animeComponents = animesGenre.map((anime) => {
     return anime.animes.map((secondAnime) => {
@@ -9,7 +10,7 @@ function AnimeList({ animesGenre }) {
     })
   });
 
-  return <div className="flex">{animeComponents}</div>;
+  return <div className="flex5">{animeComponents}</div>;
 }
 
 export default AnimeList;

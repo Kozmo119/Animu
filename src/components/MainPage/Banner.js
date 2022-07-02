@@ -1,9 +1,23 @@
 import "./banner.css";
-import axios from "axios";
+import axios from "./axios";
 import requests from "./Requests";
 import { useState, useEffect } from "react";
 
 const Banner = () => {
+  const [anime, setAnime] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const request = await axios.get(requests.fetchActionAnimes);
+      setAnime(
+        request.data
+      );
+      return request
+    }
+    fetchData();
+  }, []);
+  // console.log(anime)
+
 
   const truncate = (string, n) => {
     return string?.length > n ? string.substr(0, n - 1) + "..." : string;

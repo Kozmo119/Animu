@@ -1,0 +1,31 @@
+
+
+.flex5 {
+    display: flex;
+    max-width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    display: flex;
+    
+}
+
+.flex5::-webkit-scrollbar{
+    display: none;
+ }
+
+.row-poster1{
+   max-height: 300px;
+    object-fit: contain;
+    margin-right: 28px;
+    transition: 450ms;
+    /* width: 100%; */
+    border-radius: 10px;
+}
+
+
+
+.row-poster1-container {
+    padding-right: 10px;
+}
