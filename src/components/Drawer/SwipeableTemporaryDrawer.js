@@ -172,20 +172,17 @@ export default function SwipeableTemporaryDrawer() {
 
   return (
     <div className="drawer-menu">
-      {/* <MenuIcon />
-      {["left"].map((anchor) => (
        <>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          <MenuIcon style={{cursor: "pointer"}} onClick={toggleDrawer('left', true)}></MenuIcon>
           <SwipeableDrawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-            onOpen={toggleDrawer(anchor, true)}
+            anchor={'left'}
+            open={state['left']}
+            onClose={toggleDrawer('left', false)}
+            onOpen={toggleDrawer('left', true)}
           >
-            {list(anchor)}
+            {list('left')}
           </SwipeableDrawer>
           </>
-      ))} */}
     </div>
   );
 }
