@@ -3,9 +3,9 @@ import "./row.css";
 import { useState, useEffect } from "react";
 import axios from "./axios";
 import Anime from "./BackApi/Anime";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
-function Row({ title, fetchUrl, }) {
+function Row({ title, fetchUrl }) {
   const [animeGenre, setAnimeGenre] = useState([]);
 
   useEffect(() => {
@@ -30,32 +30,19 @@ function Row({ title, fetchUrl, }) {
     <div className="row">
       <h2>{animeGenre.name}</h2>
       <div className="row-posters">
-          {animeGenre.animes?.map((anime) => {
-            return (<Link to={`/homepage/${anime.name}`}>
-            <img className="row-poster" src={anime.imageUrl} alt={anime.name} key={anime.id} />
-            </Link>);
-          })}
-        ;
+        {animeGenre.animes?.map((anime) => (
+          
+              <img
+                className="row-poster"
+                src={anime.imageUrl}
+                alt={anime.name}
+                key={anime.id}
+              />
+          
+          ))}
       </div>
     </div>
   );
 }
 
 export default Row;
-
-// return (
-//   <div className="row">
-//     <h2>{title}</h2>
-//     {/* {movies.map(movie => (<img src={movie.imageUrl} alt={movie.name}/>))} */}
-
-//     <div className="row-posters">
-//     <img className="row-poster"
-//       src={
-//         "https://thesmartlocal.com/japan/wp-content/uploads/2020/03/Top-Anime-Movies-21.jpg"
-//       }
-//       alt="poster"
-//     />
-
-//     </div>
-//   </div>
-// );
