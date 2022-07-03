@@ -3,8 +3,9 @@ import "./row.css";
 import { useState, useEffect } from "react";
 import axios from "./axios";
 import Anime from "./BackApi/Anime";
+import {Link} from "react-router-dom"
 
-function Row({ title, fetchUrl, isLargeRow = false }) {
+function Row({ title, fetchUrl, }) {
   const [animeGenre, setAnimeGenre] = useState([]);
 
   useEffect(() => {
@@ -23,14 +24,16 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
   //     })
   //   })
 
-  console.log(animeGenre.animes?.map((anime) => anime.name));
+  // console.log(animeGenre.animes?.map((anime) => anime.name));
 
   return (
     <div className="row">
       <h2>{animeGenre.name}</h2>
       <div className="row-posters">
           {animeGenre.animes?.map((anime) => {
-            return <img className="row-poster" src={anime.imageUrl} alt={anime.name} />;
+            return (<Link to={`/homepage/${anime.name}`}>
+            <img className="row-poster" src={anime.imageUrl} alt={anime.name} key={anime.id} />
+            </Link>);
           })}
         ;
       </div>

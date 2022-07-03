@@ -7,10 +7,12 @@
 }
 
 .row-posters {
-    display: flex;
+    display: grid;
     overflow-y: hidden;
     overflow-x: scroll;
-    
+    flex-direction: column;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 25px;
     padding-bottom: 50px;
 }
 
@@ -19,14 +21,17 @@
 }
 
 .row-poster {
-    max-height: 300px;
+    max-height: 250px;
     object-fit: contain;
     margin-right: 28px;
     transition: 450ms;
     /* width: 100%; */
-    border-radius: 10px;
+    border-radius: 15px;
+
+
 
 }
+
 
 .row-poster:hover {
     transform: scale(1.1);

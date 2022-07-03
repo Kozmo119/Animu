@@ -28,6 +28,7 @@ const HomeScreen = () => {
       <Row title="Comedy" fetchUrl={Request.fetchComedyAnimes} />
       <Row title="Action" fetchUrl={Request.fetchActionAnimes} />
       <Row title="Ecchi" fetchUrl={Request.fetchEcchiAnimes} />
+      <Row title="Supernatural" fetchUrl={Request.fetchSupernaturalAnimes} />
     </div>
   );
 };

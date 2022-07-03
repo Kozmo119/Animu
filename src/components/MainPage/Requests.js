@@ -19,6 +19,7 @@ const requests = {
   fetchComedyAnimes: `/1`,
   fetchActionAnimes: `/2`,
   fetchEcchiAnimes: `/3`,
+  fetchSupernaturalAnimes: `/4`,
 };
 
 
