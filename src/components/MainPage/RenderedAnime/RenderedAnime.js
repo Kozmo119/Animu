@@ -11,13 +11,13 @@ const RenderedAnime = ({ renderedAnime }) => {
   useEffect(() => {
     if (renderedAnime.length) {
       let filterChecker = renderedAnime.filter((anime) => {
-        if (anime.animes[0].name == params.animeName) {
-          // console.log("filter found something")
-        
+        if (anime.name == params.animeName) {
+          return anime;
         }
+        // console.log(anime)
       });
-
-      setchosenAnime(filterChecker[0]);
+      // console.log(filterChecker)
+      setchosenAnime(filterChecker);
     }
   }, [renderedAnime]);
 
@@ -29,9 +29,9 @@ const RenderedAnime = ({ renderedAnime }) => {
             <>
               <div>
                 <h1>Chosen Anime:</h1>
-                <h2>{chosenAnime.animes[0].name}</h2>
+                <h2>{chosenAnime[0].name}</h2>
                 <br />
-                <img src={chosenAnime.animes[0].imageUrl} alt="" />
+                <img src={chosenAnime[0].imageUrl} alt="" />
               </div>
             </>
           }

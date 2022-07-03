@@ -5,18 +5,18 @@ const RenderedAnimeList = () => {
   const [renderedAnime, setRenderedAnime] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/genres")
+    fetch("http://localhost:8080/animes")
       .then((response) => response.json())
       .then((data) => setRenderedAnime(data));
    
   }, []);
 
-  useEffect(() => {
-    console.log(renderedAnime)
+  // useEffect(() => {
+  //   console.log(renderedAnime)
 
   
 
-  }, [renderedAnime]);
+  // }, [renderedAnime]);
   
 
   return (
