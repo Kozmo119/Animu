@@ -21,19 +21,37 @@ const RenderedAnime = ({ renderedAnime }) => {
     }
   }, [renderedAnime]);
 
+  const truncate = (string, n) => {
+    return string?.length > n ? string.substr(0, n - 1) + "..." : string;
+  };
+
   return (
     <>
       {chosenAnime ? (
         <>
           {
-            <>
-              <div>
-                <h1>Chosen Anime:</h1>
-                <h2>{chosenAnime[0].name}</h2>
-                <br />
-                <img src={chosenAnime[0].imageUrl} alt="" />
+            <header
+            className="banner"
+            style={{
+              backgroundSize: "cover",
+              backgroundImage: `url("${chosenAnime[0].imageUrl}")`,
+              backgroundPosition: "center, center",
+            }}
+          >
+            <div className="banner-contents">
+              <h1 className="banner-title">{chosenAnime[0].name}</h1>
+              <div className="banner-buttons">
+                <button className="banner-button">Play</button>
+                <button className="banner-button">My List</button>
               </div>
-            </>
+              <h1 className="banner-description">
+                {truncate(chosenAnime[0].description, 150)}
+              </h1>
+            </div>
+      
+            <div className="banner--fadeButtom" />
+          </header>
+
           }
         </>
       ) : (
@@ -44,3 +62,4 @@ const RenderedAnime = ({ renderedAnime }) => {
 };
 
 export default RenderedAnime;
+
