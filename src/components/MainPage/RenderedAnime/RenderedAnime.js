@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import "./renderedAnime.css"
 
 const RenderedAnime = ({ renderedAnime }) => {
   const params = useParams();
@@ -31,23 +32,8 @@ const RenderedAnime = ({ renderedAnime }) => {
         <>
           {
             <header
-            className="banner"
-            style={{
-              backgroundSize: "cover",
-              backgroundImage: `url("${chosenAnime[0].imageUrl}")`,
-              backgroundPosition: "center, center",
-            }}
-          >
-            <div className="banner-contents">
-              <h1 className="banner-title">{chosenAnime[0].name}</h1>
-              <div className="banner-buttons">
-                <button className="banner-button">Play</button>
-                <button className="banner-button">My List</button>
-              </div>
-              <h1 className="banner-description">
-                {truncate(chosenAnime[0].description, 150)}
-              </h1>
-            </div>
+            className="banner">
+            <img className="banner-dynamic" src={chosenAnime[0].coverImage} alt={chosenAnime[0].name}/>
       
             <div className="banner--fadeButtom" />
           </header>
