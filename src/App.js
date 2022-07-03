@@ -33,6 +33,7 @@ function App() {
       </Route>
       <Route path="/homepage/:animeName">
         <RenderedAnimeList/>
+      
       </Route>
     </Switch>
   );
