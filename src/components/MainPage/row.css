@@ -1,4 +1,4 @@
-/* .row {
+.row {
     color: black;
     margin-left: 20px;
     padding-left: 20px;
@@ -8,12 +8,12 @@
 
 .row-posters {
     display: grid;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    flex-direction: column;
-grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 25px;
-    padding-bottom: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, max-content));
+    grid-gap: 30px;
+    justify-content: space-around;
+    padding: initial;
+    margin-top: 10px;
+    padding-top: 50px; 
 }
 
 .row-posters::-webkit-scrollbar {
@@ -40,9 +40,9 @@ grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
 .row-title{
     padding-bottom: 5px;
-} */
+}
 
-.row {
+/* .row {
     color: black;
     margin-left: 20px;
 }
@@ -70,4 +70,4 @@ grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 .row-poster:hover {
     transform: scale(1.08);
     opacity: 0.7;
-}
+} */
