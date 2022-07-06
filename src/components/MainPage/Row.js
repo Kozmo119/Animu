@@ -31,13 +31,19 @@ function Row({ title, fetchUrl }) {
       <h2>{animeGenre.name}</h2>
       <div className="row-posters">
         {animeGenre.animes?.map((anime) => (
-          <Link to={`/homepage/${anime.name}`}>
-              <img
-                className="row-poster"
-                src={anime.imageUrl}
-                alt={anime.name}
-                key={anime.id}
-              />
+          <Link style={{textDecoration:"none"}} to={`/homepage/${anime.name}`}>
+              <div className="single-team">
+      <img
+        className="row-poster"
+        src={anime.imageUrl}
+        alt={anime.name}
+        key={anime.id}
+      />
+      <div className="team-text">
+        <h4>{anime.name}</h4>
+        <p>{anime.rating}/10</p>
+      </div>
+    </div>
               </Link>
           
           ))}
