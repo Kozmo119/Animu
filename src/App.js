@@ -8,11 +8,19 @@ import Footer from "./components/Footer/Footer";
 import Nav from "./components/MainPage/Nav";
 import Profile from "./components/Profile/Profile";
 import RenderedAnimeList from "./components/MainPage/RenderedAnime/RenderedAnimeList";
+import Goku from "./components/AnimatedPage/Goku";
 function App() {
   return (
     <Switch>
+
+
+<Route path="/" exact>
+        <div className="main">
+          <Goku/>
+        </div>
+      </Route>
       
-      <Route path="/" exact>
+      <Route path="/gb">
         <div className="main">
           <Navbar />
           <StoryCard />

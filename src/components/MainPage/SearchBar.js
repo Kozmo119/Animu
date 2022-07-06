@@ -1,6 +1,7 @@
 import React from "react";
 import "./searchBar.css";
 import SearchIcon from "@mui/icons-material/Search";
+import Filter from "./Filter/Filter";
 
 function SearchBar() {
   return (
@@ -12,8 +13,7 @@ function SearchBar() {
           <input />
         </div>
         <div className="filter-input">
-          <label className="filter-label">Genre</label>
-          <input />
+         <Filter />
         </div>
         <div className="filter-input">
           <label className="filter-label">?</label>
